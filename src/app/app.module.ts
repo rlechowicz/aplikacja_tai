@@ -22,6 +22,7 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { TextFormatDirective } from './directives/text-format.directive';
 import { Observable } from 'rxjs';
 import { BlogCreateComponent } from './components/blog-create/blog-create.component';
+import { AuthServiceService } from './services/auth-service.service';
 
 const appRoutes: Routes = [
   {
@@ -76,7 +77,7 @@ const appRoutes: Routes = [
 	FormsModule,
 	ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
